@@ -1,4 +1,4 @@
-service: sls
+service: shopfe
 
 frameworkVersion: "3"
 
@@ -8,13 +8,12 @@ plugins:
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   # lambdaHashingVersion: 20201221
 
 custom:
   client:
-    bucketName: battiw-first-bucket-1
-    # bucketName: battiw-second-bucked
+    bucketName: battiw-aws-shop-fe
     distributionFolder: build
     indexDocument: index.html
     errorDocument: index.html
