@@ -14,7 +14,7 @@ import API_PATHS from "constants/apiPaths";
 // import axios from 'axios';
 // import API_PATHS from "constants/apiPaths";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import productList from "./productList.json";
+// import productList from "./productList.json";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -41,13 +41,15 @@ export default function Products() {
   useEffect(() => {
     axios
       .get(`${API_PATHS.product}`)
-      .then((res) => setProducts(res.data.productList));
+      .then((res) => setProducts(res.data.productsConsole)); // connect from PG bd
+    // .then((res) => setProducts(res.data.productList1)); // connect from mockfile product.mjs
+    //
     // axios.get(`${API_PATHS.bff}/product/available/`)
     //   .then(res => setProducts(res.data));
     // setProducts(productList);
   }, []);
-  console.log(setProducts);
-  console.log(products);
+  // console.log(setProducts);
+  // console.log(products);
 
   return (
     <Grid container spacing={4}>
