@@ -33,7 +33,8 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
     // Get the presigned URL
     const response = await axios({
       method: "GET",
-      url: "https://sfc4iwmuik.execute-api.eu-west-1.amazonaws.com/dev/import",
+      // url: "https://645gkyvbe9.execute-api.eu-west-1.amazonaws.com/dev/import", // using WP
+      url: "https://sfc4iwmuik.execute-api.eu-west-1.amazonaws.com/dev/import", // without WP
       // url,
       params: {
         name: encodeURIComponent(file.name),
