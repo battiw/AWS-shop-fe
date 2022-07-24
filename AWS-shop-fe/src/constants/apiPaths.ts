@@ -1,8 +1,8 @@
 const API_PATHS = {
-  product:
-    " https://7qmhjcyh44.execute-api.eu-west-1.amazonaws.com/dev/products",
   // product:
-  //   "https://07yjzeof27.execute-api.eu-west-1.amazonaws.com/dev/products",
+  //   " https://7qmhjcyh44.execute-api.eu-west-1.amazonaws.com/dev/products",
+  product:
+    "https://07yjzeof27.execute-api.eu-west-1.amazonaws.com/dev/products",
   order: "https://07yjzeof27.execute-api.eu-west-1.amazonaws.com/dev/products",
   // import: "https://645gkyvbe9.execute-api.eu-west-1.amazonaws.com/dev/import", // ussing WP
   import: "https://9lyka8f6d9.execute-api.eu-west-1.amazonaws.com/dev/import", // without WP

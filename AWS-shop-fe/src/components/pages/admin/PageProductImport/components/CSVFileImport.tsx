@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-concat */
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
@@ -30,7 +31,10 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
   };
 
   const uploadFile = async (e: any) => {
+    const authorization_token = localStorage.getItem("authorization_token");
+
     // Get the presigned URL
+
     const response = await axios({
       method: "GET",
       // url: "https://645gkyvbe9.execute-api.eu-west-1.amazonaws.com/dev/import", // using WP
@@ -39,6 +43,7 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
       params: {
         name: encodeURIComponent(file.name),
       },
+      headers: { Authorization: "Basic " + authorization_token },
     });
     console.log("File to upload: ", file.name);
     console.log("File to upload1: ", file);
