@@ -46,6 +46,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 To CloudFront URL and S3-website
 
-[CloudFront URL](https://d11on4zjjr1z1f.cloudfront.net/)
+[CloudFront URL](https://d1zdbonze7xn8z.cloudfront.net)
 
-[S3-website](http://battiw-first-bucket-1.s3-website-us-east-1.amazonaws.com)
+[S3-website](http://battiw-aws-shop-fe.s3-website-us-east-1.amazonaws.com)
