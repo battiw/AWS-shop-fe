@@ -39,8 +39,13 @@ export default function Products() {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
+    // axios
+    // .get(`${API_PATHS.product}`)
+    // axios
+    //   .get(`${API_PATHS.product}/products/`)
     axios
-      .get(`${API_PATHS.product}`)
+      .get(`${API_PATHS.bff}/products/`)
+
       .then((res) => setProducts(res.data.productsConsole)); // connect from PG bd
     // .then((res) => setProducts(res.data.productList1)); // connect from mockfile product.mjs
     //

@@ -21,6 +21,8 @@ axios.interceptors.response.use(
     }
     if (responseStatus === 401 || responseStatus === 403) {
       alert(error.response.data?.message);
+      alert("KUKUy");
+      // alert(`${error.response.status} : ${error.response.data?.message}`);
     }
 
     return Promise.reject(error?.response ?? error);
